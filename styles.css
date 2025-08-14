@@ -1,0 +1,250 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: rgb(96, 92, 92);
+    color: #ffffff;
+    line-height: 1.6;
+}
+header {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.2)), url('image2.jpg') center/cover no-repeat;
+    color: #bdb1b1;
+    padding-bottom: 0px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 8%;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #d8ded7;
+}
+
+nav ul {
+    list-style: square;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+.hero {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+.hero {
+    background-image: url('https://img.freepik.com/free-vector/realistic-travel-background-with-elements_52683-77784.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #294a6b;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    background: #ff9800;
+    color: #fff;
+    padding: 12px 32px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #e65100;
+}
+
+main {
+    padding: 50px 8% 0 8%;
+}
+
+.destinations, .packages, .about, .contact {
+    margin-bottom: 60px;
+}
+
+h2 {
+    font-size: 2.2rem;
+    color: #fd9902;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.destination-cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 25px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    padding: 45px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 60px;
+    margin-bottom: 28px;
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.card p {
+    color: #555;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+}
+
+.package-list {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.package {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    padding: 28px 24px;
+    width: 300px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.package h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.package p {
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.price {
+    display: block;
+    font-size: 1.3rem;
+    color: #ff9800;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.about p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #eddfdf;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.contact form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact input, .contact textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    resize: none;
+}
+
+.contact textarea {
+    min-height: 100px;
+}
+
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .destination-cards,
+    .package-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    main {
+        padding: 30px 4% 0 4%;
+    }
+    .card, .package {
+        width: 100%;
+    }
+}
